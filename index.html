@@ -1,298 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tututu Orchestra</title>
-  <link rel="icon" type="image/png" href="/images/sun.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-
-  <style>
-    @font-face {
-      font-family: 'Herald Square';
-      src: url('/fonts/herald-square.squarenf.otf') format('opentype');
-      font-weight: normal;
-      font-style: normal;
-    }
-
-    :root {
-      --gold: #d8a200;
-      --orange: #ce5426;
-      --teal: #019297;
-      --bg: #111;
-      --text-light: #eee;
-      --text-muted: #ccc;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body, html {
-      scroll-behavior: smooth;
-      font-family: 'Roboto', sans-serif;
-      background-color: var(--bg);
-      color: var(--text-light);
-    }
-
-    /* Container for consistent padding */
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    header {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      background: transparent;
-      padding: 20px 0;
-    }
-
-    nav {
-      max-width: 1000px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 30px;
-      flex-wrap: wrap;
-      padding: 0 20px;
-    }
-
-    nav a {
-      color: var(--text-light); /* using main page text color */
-      text-decoration: none;
-      font-size: 1.1rem;
-      letter-spacing: 1px;
-      transition: color 0.3s;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    nav a:hover {
-      color: var(--gold); /* main page gold color */
-    }
-
-    /* Responsive for smaller screens */
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
-    }
-
-    /* HERO */
-    .hero {
-      background: url('/images/Photo_Ula_Virant.webp') center/cover no-repeat;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-family: 'Herald Square', serif;
-      font-size: 4rem;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 30px 40px;
-      border-radius: 10px;
-      color: var(--gold);
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-    }
-
-    /* Upcoming Show Section */
-    section.upcoming-show {
-      background-color: #2e2200; /* subtle dark gold/brown */
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(216, 162, 0, 0.5);
-      padding: 40px 20px;
-      margin: 0 20px 80px;
-    }
-
-    .upcoming-show-content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 40px;
-      text-align: left;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .upcoming-show img {
-      max-width: 100%;
-      width: 400px;
-      height: auto;
-      border-radius: 10px;
-      flex-shrink: 0;
-      box-shadow: 0 0 10px rgba(216, 162, 0, 0.6);
-    }
-
-    .upcoming-show-text {
-      max-width: 550px;
-      color: var(--text-light);
-    }
-
-    .upcoming-show h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: var(--gold);
-    }
-
-    .upcoming-show p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-      line-height: 1.5;
-    }
-
-    .more-info-link {
-      display: inline-block;
-      font-size: 1.1rem;
-      color: var(--gold);
-      text-decoration: none;
-      font-weight: 600;
-      border: 2px solid var(--gold);
-      padding: 8px 16px;
-      border-radius: 6px;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    .more-info-link:hover {
-      background-color: var(--gold);
-      color: var(--bg);
-      text-decoration: none;
-    }
-
-    /* Video Section */
-    .video-section iframe {
-      width: 100%;
-      max-width: 800px;
-      height: 450px;
-      border: none;
-      border-radius: 10px;
-      display: block;
-      margin: 0 auto 20px auto;
-    }
-
-    .video-section p {
-      color: var(--text-muted);
-      font-size: 1rem;
-      text-align: center;
-    }
-
-    /* Footer */
-    footer {
-      background: #222;
-      color: #fff;
-      text-align: center;
-      padding: 20px 0;
-    }
-footer a {
-  display: inline-flex;
-  margin: 0 8px;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nina Virant</title>
+<meta name="description" content="Nina Virant – voice, ritual and South Slavic heritage. Debut release: VIRA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#1c1d22;
+  --slate:#26282f;
+  --sage:#9fb39b;
+  --cream:#efe9d6;
+  --gold:#b8a560;
+  --muted:#a9a89f;
 }
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',sans-serif;background:var(--night);color:var(--cream);line-height:1.7}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
 
-.icon {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-  flex-shrink: 0;
+/* NAV */
+header{position:absolute;top:0;left:0;width:100%;z-index:10;padding:28px 24px}
+nav{display:flex;justify-content:flex-end;gap:36px;flex-wrap:wrap;max-width:1200px;margin:0 auto}
+nav a{text-decoration:none;font-weight:600;font-size:.8rem;letter-spacing:.3em;text-transform:uppercase;transition:color .3s}
+nav a:hover{color:var(--gold)}
+
+/* HERO */
+.hero{
+  min-height:100vh;display:flex;align-items:flex-end;
+  background:
+    linear-gradient(90deg,rgba(28,29,34,.85) 0%,rgba(28,29,34,.2) 60%),
+    linear-gradient(0deg,var(--night) 0%,rgba(28,29,34,0) 35%),
+    url('images/vira-cover.png') center 18%/cover no-repeat;
+  padding:0 24px 12vh;
 }
-    /* Responsive */
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
+.hero-inner{max-width:1200px;margin:0 auto;width:100%}
+.hero h1{font-size:clamp(2rem,6vw,4.5rem);font-weight:700;letter-spacing:.35em;text-transform:uppercase;line-height:1.2}
+.rule{height:4px;background:var(--cream);width:min(520px,80%);margin:24px 0}
+.hero p{font-style:italic;font-weight:600;color:var(--gold);max-width:34ch;font-size:1.05rem}
 
-      .upcoming-show-content {
-        flex-direction: column;
-        text-align: center;
-      }
+/* RELEASE */
+.release{background:var(--slate);padding:120px 24px}
+.release-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:minmax(260px,420px) 1fr;gap:80px;align-items:center}
+.release img{width:100%;height:auto;display:block;box-shadow:0 30px 60px rgba(0,0,0,.45)}
+.release h2{font-size:clamp(3rem,9vw,6.5rem);font-weight:600;letter-spacing:.55em;color:var(--gold);line-height:1;margin-bottom:28px}
+.release .sub{font-style:italic;font-weight:700;color:var(--gold);max-width:34ch;margin-bottom:28px}
+.release p.body{color:var(--muted);max-width:52ch;margin-bottom:36px}
+.links{display:flex;flex-wrap:wrap;gap:16px}
+.btn{display:inline-block;text-decoration:none;font-weight:700;font-size:.8rem;letter-spacing:.25em;text-transform:uppercase;border:2px solid var(--gold);color:var(--gold);padding:14px 28px;transition:background .3s,color .3s}
+.btn:hover{background:var(--gold);color:var(--night)}
 
-      .upcoming-show-text {
-        text-align: center;
-      }
+/* ABOUT + CONTACT */
+section.plain{padding:120px 24px}
+.narrow{max-width:760px;margin:0 auto}
+h3{font-size:1.6rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;margin-bottom:12px}
+.rule.short{width:120px;height:3px;margin:0 0 36px;background:var(--sage)}
+.about p{color:var(--muted);margin-bottom:20px}
+.contact{background:var(--slate);text-align:center}
+.contact .rule.short{margin:0 auto 36px}
+.contact a.mail{font-size:1.2rem;font-weight:600;color:var(--sage);text-decoration:none;border-bottom:1px solid var(--sage)}
+.social{display:flex;justify-content:center;gap:28px;margin-top:40px}
+.social a{color:var(--cream);transition:color .3s}
+.social a:hover{color:var(--gold)}
+.icon{width:24px;height:24px;fill:currentColor}
 
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-    }
-  </style>
+footer{text-align:center;padding:32px 24px;font-size:.75rem;letter-spacing:.2em;color:var(--muted);background:var(--night)}
+
+@media (max-width:800px){
+  .release-inner{grid-template-columns:1fr;gap:48px}
+  .release{padding:80px 24px}
+  section.plain{padding:80px 24px}
+  nav{justify-content:center;gap:22px}
+  .hero{background-position:center top}
+}
+</style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about/">About</a>
-      <a href="gallery/">Gallery</a>
-      <a href="contact/">Contact</a>
-    </nav>
-  </header>
+<header>
+  <nav>
+    <a href="#top">Home</a>
+    <a href="#vira">Vira</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <!-- Hero Section -->
+<main id="top">
   <div class="hero">
-    <h1>Tututu Orchestra</h1>
+    <div class="hero-inner">
+      <h1>Nina Virant</h1>
+      <div class="rule"></div>
+      <p>Voice, ritual and South Slavic heritage.</p>
+    </div>
   </div>
 
-  <!-- Kino Siska Poster Section -->
-  <section class="upcoming-show">
-    <div class="upcoming-show-content">
-      <div class="poster-left">
-      <a href="https://www.festivals.mt/nb">
-    <img src="/images/tututu-notte-bianca.webp" alt="Notte Bianca Poster" />
-  </a>
-      </div>
-      <div class="poster-right upcoming-show-text">
-        <h2>Tututu Orchestra at Notte Bianca Valletta 2026!</h2>
-        <p>
-          On 3rd of October join us at one of the biggest Malta's outdoor festivals where will be performing with local guests!
-        </p>
-        <a href="https://www.festivals.mt/nb" class="more-info-link">More Info</a>
+  <section class="release" id="vira">
+    <div class="release-inner">
+      <img src="images/vira-cover.png" alt="VIRA – cover of the release by Nina Virant">
+      <div>
+        <h2>VIRA</h2>
+        <p class="sub">A contemporary reimagining of South Slavic ritual heritage through voice.</p>
+        <p class="body">Add a few sentences here about the release: how it was made, who played on it, what it means to you.</p>
+        <div class="links">
+          <a class="btn" href="#">Listen</a>
+          <a class="btn" href="#">Watch</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- YouTube Video Section -->
-  <section class="video-section">
-    <div class="container">
-      <iframe 
-        src="https://www.youtube.com/embed/AUOqdfrR8mM?start=0" 
-        allowfullscreen 
-        title="Tututu Orchestra Live Concert"></iframe>
+  <section class="plain about" id="about">
+    <div class="narrow">
+      <h3>About</h3>
+      <div class="rule short"></div>
+      <p>Write Nina's short biography here: who she is, where she is based, and what her work is about.</p>
+      <p>A second paragraph can cover collaborations, performances or projects.</p>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Tututu Orchestra. All rights reserved.</p>
-                <a href="https://www.youtube.com/@tututu.orchestra" target="_blank" rel="noopener" aria-label="YouTube">
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M21.8 8.001a2.75 2.75 0 00-1.936-1.945C18.2 5.6 12 5.6 12 5.6s-6.2 0-7.864.456A2.75 2.75 0 002.2 8.001 28.7 28.7 0 001.75 12a28.7 28.7 0 00.45 3.999 2.75 2.75 0 001.936 1.945C5.8 18.4 12 18.4 12 18.4s6.2 0 7.864-.456a2.75 2.75 0 001.936-1.945A28.7 28.7 0 0022.25 12a28.7 28.7 0 00-.45-3.999zM9.95 15.1V8.9L15.5 12l-5.55 3.1z"/>
-        </svg>
-      </a>
-        <a href="https://instagram.com/tututu.orchestra" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5a3.75 3.75 0 003.75-3.75v-8.5A3.75 3.75 0 0016.25 4h-8.5zm8.25 1.5a.75.75 0 110 1.5.75.75 0 010-1.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/>
-        </svg>
-      </a>
-          <a href="https://facebook.com/tututuorchestra" target="_blank" rel="noopener" aria-label="Facebook">
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M22 12a10 10 0 10-11.5 9.87v-6.99H8v-2.88h2.5V9.5a3.5 3.5 0 013.75-3.87 15.64 15.64 0 012.25.2v2.5H14a1.5 1.5 0 00-1.75 1.62v1.87h3l-.5 2.88h-2.5v6.99A10 10 0 0022 12z"/>
-        </svg>
+  <section class="plain contact" id="contact">
+    <div class="narrow">
+      <h3>Contact</h3>
+      <div class="rule short"></div>
+      <p style="margin-bottom:20px;color:var(--muted)">For bookings and collaborations:</p>
+      <a class="mail" href="mailto:hello@ninavirant.com">hello@ninavirant.com</a>
+      <div class="social">
+        <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5a3.75 3.75 0 003.75-3.75v-8.5A3.75 3.75 0 0016.25 4h-8.5zm8.25 1.5a.75.75 0 110 1.5.75.75 0 010-1.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/></svg>
         </a>
-  </footer>
+        <a href="https://youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.8 8.001a2.75 2.75 0 00-1.936-1.945C18.2 5.6 12 5.6 12 5.6s-6.2 0-7.864.456A2.75 2.75 0 002.2 8.001 28.7 28.7 0 001.75 12a28.7 28.7 0 00.45 3.999 2.75 2.75 0 001.936 1.945C5.8 18.4 12 18.4 12 18.4s6.2 0 7.864-.456a2.75 2.75 0 001.936-1.945A28.7 28.7 0 0022.25 12a28.7 28.7 0 00-.45-3.999zM9.95 15.1V8.9L15.5 12l-5.55 3.1z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>&copy; 2026 NINA VIRANT</footer>
 
 </body>
 </html>
